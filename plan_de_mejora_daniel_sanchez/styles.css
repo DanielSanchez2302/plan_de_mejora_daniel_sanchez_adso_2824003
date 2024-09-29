@@ -1,0 +1,220 @@
+/* Resetear el modelo de caja */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: blue; /* Color de fondo inicial */
+    background-image: url('dragonballz.png'); /* Imagen de fondo */
+    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+    background-repeat: no-repeat; /* Evita repetir la imagen */
+}
+
+header {
+    text-align: center;
+}
+
+
+
+/* Variables globales */
+:root {
+    --primary-color: #0073b1;
+    --secondary-color: #333;
+    --light-color: #f3f3f3;
+    --hover-color: #005582; /* Color cuando se pasa el mouse */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--light-color);
+}
+
+/* Cabecera */
+/* Ajuste de la barra azul donde están los botones */
+.header {
+    background-color: #0073b1; /* Color azul de fondo */
+    display: flex; /* Para alinear los elementos en fila */
+    align-items: center; /* Centra la imagen y los botones verticalmente */
+    padding: 10px; /* Espaciado dentro del contenedor */
+    height: 100px; /* Ajusta la altura de la barra para que coincida con los botones */
+    gap: 4%;   
+}
+
+
+
+.header__search input {
+   width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
+    max-width: 200px; /* Máximo ancho para que no sobrepase los límites de la barra */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    margin-left: 20px; /* Espaciado opcional a la izquierda */
+    margin-top: 10px; /* Ajuste opcional del margen superior */
+    object-fit: contain;
+    
+}
+.logo-txt {
+    
+    font-family: cursive;
+}
+
+/* Botones de navegación */
+.nav-button {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: white;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+/* Botones de acciones (Foto, Video, Evento) */
+.action-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+    background-color: var(--hover-color);
+}
+
+/* Botón de publicar */
+.action-submit {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.action-submit:hover {
+    background-color: var(--hover-color);
+}
+
+/* Contenedor */
+.container {
+    display: flex;
+    margin-top: 1rem;
+}
+
+/* Barra lateral */
+.sidebar {
+    width: 25%;
+    padding: 1rem;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+
+
+.profile-card {
+    text-align: center;
+}
+
+.profile-card__img {
+    border-radius: 50%;
+    width: 100px;
+}
+nav {
+    text-align: center;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.menu {
+    display: none;
+    list-style: none;
+    padding: 0;
+}
+
+
+
+/* Contenido principal */
+.main {
+    width: 75%;
+    padding: 1rem;
+}
+
+.post-section, .trending-news {
+    background-color: white;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Títulos con márgenes */
+h1, h2, h3, h4, h5, h6 {
+    margin: 1rem 0; /* Agregar márgenes superiores e inferiores a los títulos */
+    transition: color 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
+    color: var(--hover-color); /* Cambiar el color cuando se pasa el mouse por encima */
+}
+
+/* Flexbox */
+.header, .container {
+    display: flex;
+    
+}
+
+/* Grid */
+.main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+/* Metodología BEM */
+.header__logo { 
+    position: relative;
+    height: 30px;
+    width: 30px;
+    border-radius: 50% ;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 25px;   
+}
+.header__logo img{
+    
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+ 
+.header__nav { 
+    display: flex;
+    align-items: center;
+    gap: 25px;   
+}
+ 
+.sidebar__profile { /*...*/ }
+.main__post-section { /*...*/ }
+
+
